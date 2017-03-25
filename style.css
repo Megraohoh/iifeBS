@@ -1,3 +1,14 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
+
+
 /*For display on the page, use Bootstrap to style the form and table 
 elements. Use Bootstrap's grid system and styling classes to get the following effects.*/
 
