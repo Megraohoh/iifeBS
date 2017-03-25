@@ -13,7 +13,7 @@
 	<body>
 
 
-		<form class="form-horizontal">
+		<form>
 
 <!-- *****DONOR INFORMATION***** -->		
 
@@ -55,25 +55,48 @@
 
 <!-- *****BUTTONS***** -->
 
-		  <div class="form-group">
+		  <div class="btn-container">
 		    <div class="col-sm-offset-2 col-sm-10">
-		      <button type="submit" class="btn btn-default">Donate</button>
+		      <button type="submit" class="btn btn-default" id="donate">Donate</button>
 		    </div>
-		  </div>
+		  <!-- </div>
 
-		  <div class="form-group">
+		  <div class="form-group"> -->
 		    <div class="col-sm-offset-2 col-sm-10">
-		      <button type="submit" class="btn btn-default">Cancel</button>
+		      <button type="submit" class="btn btn-default" id="cancel">Cancel</button>
 		    </div>
 		  </div>
 
 		</form>
+
 <!-- *****TABLE***** -->
-		<div id="tableList" class="col-xs-12 col-sm-7 col-lg-7 col-lg-offset-1">
-			<div>Our Current Donors:</div>
-			<table class="table table-striped" id="donorTable">
-          	</table>
-        </div>
+
+		<div id="tableContainer">
+			<div id="tableList" class="col-xs-12 col-sm-7 col-lg-7 col-lg-offset-1">
+				<div>Our Current Donors:</div>
+				<table class="table table-striped" id="donorTable">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Donation Amount</th>
+							<th>Donation Type</th>
+						</tr>					
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td>
+								
+							</td>
+			
+						</tr>
+					</tbody>
+   				</table>
+   			</div>
+   		</div>
+
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 

@@ -16,12 +16,16 @@ body {
 	background-color: lightgray;
 }
 .form-group {
-	margin: 25px;
+	margin: 15px;
 }
 
 .input-group {
-	margin: 50px;
-	padding: 20px;
+	margin: 15px;
+	padding: 5px;
+}
+
+.btn-container {
+	display: inline;
 }
 
 

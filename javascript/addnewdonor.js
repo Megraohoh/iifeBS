@@ -1,14 +1,14 @@
 // This IIFE augments the original one
 var Donations = (function(donor) {
 
-  // Private variable 
-  var newDonor = {"inputName": , "inputEmail": , "dollarAmount": , "donationType": };
+  var newDonor = {"inputName": , "inputEmail": , "dollarAmount": , "donationType": };   // Private variable 
 
-  // Augment the original object with another method
-  donor.addDonor = function(newDonorInfo) {
-    return newDonor[newDonorInfo];
-  };
+	  return {										// Augment the original object with another method
+	  	donor.addDonor: function(newDonorInfo) {
+	    	newDonor.push(newDonorInfo);
+		}	
+ 	}
 
-  // Return the new, augmented object with the new method on it
-  return donor;
+  	return donor;  // Return the new, augmented object with the new method on it
+
 })(Donations);
