@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Walk-A-Thon!!!</title>
+		<title>Walk-A-Thon</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
+
+	<header>
+		<h3>Walk-A-Thon Donation Page</h3>
+	</header>
+
 	<body>
 
 
 		<form class="form-horizontal">
 
+<!-- *****DONOR INFORMATION***** -->		
+
 			 <div class="form-group">
-		    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+		    <label for="inputName" class="col-sm-2 control-label">Name</label>
 		    <div class="col-sm-10">
 		      <input type="text" class="form-control" id="inputName" placeholder="Name">
 		    </div>
 
 		  <div class="form-group">
-		    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+		    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 		    <div class="col-sm-10">
-		      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+		      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
 		    </div>
 		  </div>
 
 		  <div class="form-group">
 		    <label for="" class="col-sm-2 control-label">Donation</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control" id="dollarAmount" placeholder="Dollar Amount?">
+		      <input type="text" class="form-control" id="dollarAmount" placeholder="Dollar Amount">
 		    </div>
 
-		    <div class="radio">
-			  <label>
-			    <input type="radio" name="optionsRadios" id="lumpSum" value="lumpSum">
-			    This donation is a lump sum.
-			  </label>
-			</div>
+<!-- *****RADIO BUTTONS***** -->
 
-			<div class="radio">
-			  <label>
-			    <input type="radio" name="optionsRadios" id="perLap" value="perLap">
-			    This donation is per lap.
-			  </label>
-			</div>
-		  </div>
+		  <div class="radio input-group">
+ 		  		<label>
+ 			    	<input type="radio" name="optionsRadios" id="lumpSum" value="donationType">
+ 			    	This donation amount is a lump sum.
+ 				</label>
+ 			</div>
+ 
+ 			<div class="radio input-group">
+ 			 	<label>
+ 			    	<input type="radio" name="optionsRadios" id="perLap" value="donationType">
+ 		    		This donation amount is per lap
+ 		  		</label>
+ 			</div>
+ 		  </div>
+
+<!-- *****BUTTONS***** -->
 
 		  <div class="form-group">
 		    <div class="col-sm-offset-2 col-sm-10">
@@ -57,9 +68,9 @@
 		  </div>
 
 		</form>
-
+<!-- *****TABLE***** -->
 		<div id="tableList" class="col-xs-12 col-sm-7 col-lg-7 col-lg-offset-1">
-			<div>Current Donors:</div>
+			<div>Our Current Donors:</div>
 			<table class="table table-striped" id="donorTable">
           	</table>
         </div>
