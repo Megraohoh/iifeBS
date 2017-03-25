@@ -3,36 +3,27 @@ var Donations = (function(){		//IIFE
 	var donorInfo = [];				// All donor information objects should be stored in a private array in an IIFE
 
 
-	var donorName = "name";			//These are private
-	var donorEmail = "email";
-	var donorAmount = "amount";
-
 	return {						//Everything in the object is public
-		getName : function(){
-			return donorName;
+		getDonorInfo : function(){
+			return donorInfo;
 		},
-		setName : function(newName){
-			name = newName;
-		},
-		getEmail : function(){
-			return donorEmail;
-		},
-		setEmail : function(newEmail){
-			email = newEmail;
-		},
-		getAmount : function(){
-			return donorAmount;
-		},
-		setAmount : function(newAmount){
-			amount = newAmount;
+		setDonorObject : function(donorName, donorEmail, donorAmount){
+			donorObject = {}
+			donorObject["Name"] = donorName;
+			donorObject["Email"] = donorEmail;
+			donorObject["Amount"] = donorAmount;
+			donationInfo.push(donorObject);
+			console.log(donationInfo);
+
 		}
+		
 
 		
 	};
 
 })();
 
-console.log("A Thing: ",Donations.getName());
+console.log("A Thing: ",Donations.getDonorInfo());
 
 
 
