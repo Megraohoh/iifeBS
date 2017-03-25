@@ -1,9 +1,15 @@
 var Donations = (function(){		//IIFE
 
-	var donorInfo = [];				// All donor information objects should be stored in a private array in an IIFE
+	var donorInfo = [
+		{
+			"inputName": "Vicky",
+			"inputEmail": "ickyvicky@boogers.net",
+			"dollarAmount": "1",
+			"donationType": "One Time Donation"
+		}
+	];				
 
-
-	return {						//Everything in the object is public
+	return {						
 		getDonorInfo : function(){
 			return donorInfo;
 		},
@@ -18,10 +24,3 @@ var Donations = (function(){		//IIFE
 
 })();
 
-// console.log("A Thing: ",Donations.getDonorInfo());
-
-
-
-// The donor information should be stored as JS objects that contain their 
-// content type as keys and the submitted information as the value. 
-// {name: "John Donut", pledge: 70}
