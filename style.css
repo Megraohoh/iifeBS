@@ -24,8 +24,8 @@ body {
 	padding: 5px;
 }
 
-.btn-container {
-	display: inline;
+.btn {
+	display: inline-block;
 }
 
 
