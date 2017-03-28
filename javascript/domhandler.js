@@ -1,8 +1,6 @@
 var donateBtn = document.getElementById("donate"); 
 var cancelBtn = document.getElementById("cancel");
-
 var donorTable = document.getElementById("tableBody");
-
 var donorName = document.getElementById("inputName");
 var donorEmail = document.getElementById("inputEmail");
 var donorDollar = document.getElementById("dollarAmount");
@@ -10,7 +8,6 @@ var donationType = document.getElementById("donationType");
 
 function sendToDom(){
 	donorInfo = Donations.getDonorInfo();
-		console.log("Hello", donorInfo);
 
 	var tableString = "";
 	for(var i=0; i<donorInfo.length; i++){
@@ -30,15 +27,15 @@ sendToDom();
 
 
 function clear() {
-    name.value = "";
-    email.value = "";
-    amount.value = "";
+    inputName.value = "";
+    inputEmail.value = "";
+    dollarAmount.value = "";
 };
 
 
 /////////////////////////////////EVENT LISTENERS
 
-donateBtn.addEventListener("click", XXXXX);
+// donateBtn.addEventListener("click", XXXXX);
 
 cancelBtn.addEventListener("click", clear);
 
