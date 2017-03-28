@@ -16,34 +16,32 @@ var donationTypePer = document.getElementById("donationTypePer");
 		}
 	];
 
-	console.log(donorInfo);				
-
 	return {						
 		getDonorInfo : function(){
 			return donorInfo;
 		},
-		setDonorObject : function(donorName, donorEmail, donorAmount){
-			donorObject = {}
-			donorObject["Name"] = donorName;
-			donorObject["Email"] = donorEmail;
-			donorObject["Amount"] = donorAmount;
-			donorObject["DonationType"] = donationType;
-		},
+		// setDonorObject : function(donorName, donorEmail, donorAmount){
+		// 	donorObject = {}
+		// 	donorObject["Name"] = donorName;
+		// 	donorObject["Email"] = donorEmail;
+		// 	donorObject["Amount"] = donorAmount;
+		// 	donorObject["DonationType"] = donationType;
+		// },
 		setNewDonorObject : function(newDonor){
-			donorInfo.push(newDonor);
+			newDonorInfo.push(newDonor);
 		},
-		getNewDonorInfo : function(){  //function to capture userInput and send to donorInfo array
-		var newDonor = [];	
-		newDonor.name = donorName.value;
-		newDonor.email = donorEmail.value;
-		newDonor.donation = donorDollar.value;
-			if (donationTypeLump.checked){
-				newDonor.donationTypeLump = donationType.value;
-			} else if (donationTypePer.checked){
-				newDonor.donationTypePer = donationType.value;
-			};
-			
-		donorTable.setNewDonorObject(newDonor);	
+		getNewDonorInfo : function(){  
+			var newDonorInfo = {};
+			donorName.inputName = donorName.value;
+			donorEmail.inputEmail = donorEmail.value;
+			donorDollar.dollarAmount = donorDollar.value;
+				if (donationTypeLump.checked){
+					newDonor.donationTypeLump = donationType.value;
+				} else if (donationTypePer.checked){
+					newDonor.donationTypePer = donationType.value;
+				};
+
+			donorTable.setNewDonorObject(newDonor);	
 			
 		}
 	}
