@@ -10,3 +10,8 @@ var Donations = (function(donor) {
   	return donor;				  // Return the new, augmented object with the new method on it
 
 })(Donations || {});
+
+
+
+
+//function to capture userInput and send to donorInfo array

@@ -10,6 +10,8 @@ var donationType = document.getElementById("donationType");
 
 function sendToDom(){
 	donorInfo = Donations.getDonorInfo();
+		console.log("Hello", donorInfo);
+
 	var tableString = "";
 	for(var i=0; i<donorInfo.length; i++){
 		tableString += `<tr>`;
@@ -19,6 +21,8 @@ function sendToDom(){
 		tableString += `<td>${donorInfo[i].dollarAmount}</td>`;
 		tableString += `<td>${donorInfo[i].donationType}</td>`;
 		tableString += `</tr>`;
+
+		donorTable.innerHTML += tableString;
 	}	
 }
 
@@ -30,9 +34,12 @@ function clear() {
     email.value = "";
     amount.value = "";
 };
+
+
 /////////////////////////////////EVENT LISTENERS
 
-donateBtn.addEventListener("click", sendToDom);
+donateBtn.addEventListener("click", XXXXX);
+
 cancelBtn.addEventListener("click", clear);
 
 
