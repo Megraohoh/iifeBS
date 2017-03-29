@@ -36,27 +36,22 @@ function sendToDom(){
 
 sendToDom();
 
-cancelBtn.addEventListener("click", clear)
-donateBtn.addEventListener("click", donateAccept) 
-
 function donateAccept(){
-		if (event.target.innerText === "Donate") {
-			newDonor = {}
-			newDonor["Name"] = donorName.value;
-			newDonor["Email"] = donorEmail.value;
-			newDonor["Amount"] = donorDollar.value;
-		for (var i=0; i<donationType.length; i++) {
-						// console.log("green", donationType);
-			if (donationType[i].checked === true){
-				newDonor["Type"] = donationType.value;
-				Donations.donorInfo(newDonor);
-			}
-
-		sendToDom();
-		clear();
-		}
-	}
+	donorObject = Donations.setNewDonorObject();
+		newDonor = {}
+		newDonor["inputName"] = donorName.value;
+		newDonor["inputEmail"] = donorEmail.value;
+		newDonor["dollarAmount"] = donorDollar.value;
+        for (i=0; i < donationType.length; i++) {
+            if (donationType[i].checked==true) {
+            newDonor["donationType"] = donationType.getElementsByName("optionsRadios");
+        }
+    }
+	sendToDom();
+	clear();
 }
 
 
+cancelBtn.addEventListener("click", clear)
+donateBtn.addEventListener("click", donateAccept) 
 

@@ -10,15 +10,15 @@ var Donations = (function(){		//IIFE
 		}
 	];
 
-	return {						
-		getDonorInfo : function(){
-			return donorInfo;
-		},
-		
+	return {
 		setNewDonorObject : function(newDonor){
 			donorInfo.push(newDonor);
-			console.log("donorInfo", donorInfo);
-		},
+		},						
+		getDonorInfo : function(){
+			return donorInfo;
+		}
+		
+		
 
 	}
 
