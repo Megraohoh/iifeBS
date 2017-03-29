@@ -6,8 +6,8 @@ var donorName = document.getElementById("inputName");
 var donorEmail = document.getElementById("inputEmail");
 var donorDollar = document.getElementById("dollarAmount");
 var donationType = document.getElementById("donationType");
-var donationTypeLump = document.getElementById("donationTypeLump");
-var donationTypePer = document.getElementById("donationTypePer");
+// var donationTypeLump = document.getElementById("donationTypeLump");
+// var donationTypePer = document.getElementById("donationTypePer");
 
 
 function clear() {
@@ -36,27 +36,27 @@ function sendToDom(){
 
 sendToDom();
 
-cancelBtn.addEventListener("click", clear);
-// donateBtn.addEventListener("click", function(event) 
+cancelBtn.addEventListener("click", clear)
+donateBtn.addEventListener("click", donateAccept) 
 
 function donateAccept(){
 		if (event.target.innerText === "Donate") {
 			newDonor = {}
-			console.log("green");
 			newDonor["Name"] = donorName.value;
 			newDonor["Email"] = donorEmail.value;
 			newDonor["Amount"] = donorDollar.value;
-			newDonor["DonationType"] = donationType;
 		for (var i=0; i<donationType.length; i++) {
-			if (donationTypeLump.checked){
-						newDonor.donationTypeLump = donationType.value;
-					} else if (donationTypePer.checked){
-						newDonor.donationTypePer = donationType.value;
-					}
-		}
+						// console.log("green", donationType);
+			if (donationType[i].checked === true){
+				newDonor["Type"] = donationType.value;
+				Donations.donorInfo(newDonor);
+			}
+
 		sendToDom();
 		clear();
+		}
 	}
 }
+
 
 
