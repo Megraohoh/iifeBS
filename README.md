@@ -15,7 +15,7 @@
 ### Final Result:
 > A functional form submission that updates the table. 
 
-![Form Page Screenshot]()
+![Form Page Screenshot](https://raw.githubusercontent.com/Megraohoh/iifeBS/iifebs/screenshot/Screen%20Shot%202017-04-03%20at%209.06.06%20PM.png)
 
 
 ### How to run (Node must be installed on your machine):
