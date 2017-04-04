@@ -17,7 +17,9 @@ function clear() {
 }
 
 function sendToDom(){
-	donorInput = Donations.getDonorInfo();
+
+var donorInput = Donations.getDonorInfo();
+console.log(donorInput);
 
 	var tableString = "";
 	for(var i=0; i<donorInput.length; i++){
@@ -37,18 +39,20 @@ function sendToDom(){
 sendToDom();
 
 function donateAccept(){
-	donorObject = Donations.setNewDonorObject();
+	console.log("hello");
+		var newDonor
 		newDonor = {}
 		newDonor["inputName"] = donorName.value;
 		newDonor["inputEmail"] = donorEmail.value;
 		newDonor["dollarAmount"] = donorDollar.value;
         for (i=0; i < donationType.length; i++) {
             if (donationType[i].checked==true) {
-            newDonor["donationType"] = donationType.getElementsByName("optionsRadios");
+            	newDonor["donationType"] = donationType.getElementsByName("optionsRadios");
+            }	
         }
-    }
-	sendToDom();
-	clear();
+        Donations.setNewDonorInfo(newDonor);
+        sendToDom();
+		clear();
 }
 
 
