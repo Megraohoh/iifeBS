@@ -1,0 +1,36 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) and (orientation: landscape) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
+h3 {
+	margin: 15px;
+	text-align: center;
+}
+
+body {
+	background-color: lightgray;
+}
+.form-group {
+	margin: 15px;
+}
+
+.input-group {
+	margin: 15px;
+	padding: 5px;
+}
+
+.btn {
+	display: inline-block;
+}
+
+
+/*at desktop size display the table on the left and form on the right with some space around the sides*/
+/*the page should have the same display on a tablet in landscape mode, but with no space at the sides*/
+/*on mobile/vertical tablet the table should display above the form*/
+/*the table entries should be alternately striped*/
+
