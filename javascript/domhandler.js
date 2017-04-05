@@ -31,7 +31,7 @@ console.log(donorInput);
 		tableString += `<td>${donorInput[i].donationType}</td>`;
 		tableString += `</tr>`;
 
-		donorTable.innerHTML += tableString;
+		donorTable.innerHTML = tableString;
 	}	
 
 }
@@ -39,15 +39,23 @@ console.log(donorInput);
 sendToDom();
 
 function donateAccept(){
-	console.log("hello");
 		var newDonor
 		newDonor = {}
 		newDonor["inputName"] = donorName.value;
-		newDonor["inputEmail"] = donorEmail.value;
+		newDonor["inputEmail"] = donorEmail.value; 
 		newDonor["dollarAmount"] = donorDollar.value;
-        for (i=0; i < donationType.length; i++) {
+		var donationType = donationType;
+        for (i=0; i < donationType.length; i++) { 
+        	        	console.log("working");
+
+				// here, this if statement is not evaluating 
+	        	//because donationType is "undefined". 
+	        	//Do some console.log() statements and experiment  
+	        	//to try to identify which radio button is being selected.
             if (donationType[i].checked==true) {
-            	newDonor["donationType"] = donationType.getElementsByName("optionsRadios");
+            	// newDonor["donationType"] = donationType.getElementsByName("optionsRadios");
+            	console.log("hi");
+            	// return donationType[i].value;
             }	
         }
         Donations.setNewDonorInfo(newDonor);
